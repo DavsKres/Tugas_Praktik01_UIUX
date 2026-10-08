@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anggota Tim</title>
+
+  <style>
+    /* ===== Pengaturan dasar ===== */
+
+    .header {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.judul {
+  margin: 0 0 12px;
+  font-size: 2.6rem;
+}
+
+.intro {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4b5059;
+}
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 32px 20px;
+      background: #f3f4f6;
+      color: #1d2026;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    h1 {
+      max-width: 1100px;
+      margin: 0 auto 24px;
+      font-size: 1.6rem;
+    }
+
+    /* ===== Susunan kartu (2 kolom) ===== */
+    .grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    /* Kartu yang diletakkan di tengah, satu baris sendiri */
+    .tengah {
+      grid-column: 1 / -1;
+      justify-self: center;
+      width: calc(50% - 10px);
+    }
+
+    /* ===== Kartu anggota ===== */
+    .card {
+      display: flex;
+      gap: 20px;
+      padding: 18px;
+      background: #fafafa;
+      border: 1px solid #cfd2d6;
+      border-radius: 12px;
+    }
+
+    /* Kotak foto: garis silang tampil kalau gambar belum diganti */
+    .foto {
+      flex: 0 0 160px;
+      height: 160px;
+      border: 1px solid #cfd2d6;
+      border-radius: 4px;
+      overflow: hidden;
+      background:
+        linear-gradient(to top right, transparent calc(50% - 1px), #b5b8bd, transparent calc(50% + 1px)),
+        linear-gradient(to bottom right, transparent calc(50% - 1px), #b5b8bd, transparent calc(50% + 1px)),
+        #d9dbde;
+    }
+
+    .foto img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ===== Data anggota ===== */
+    .info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .nama {
+      margin: 0 0 12px;
+      font-size: 1.1rem;
+    }
+
+    table {
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    td {
+      padding: 3px 0;
+      vertical-align: top;
+    }
+
+    td:nth-child(1) { width: 80px; }
+    td:nth-child(2) { width: 16px; }
+    td:nth-child(3) { color: #4b5059; }
+
+    /* ===== Tampilan tablet & HP ===== */
+    @media (max-width: 800px) {
+      .grid   { grid-template-columns: 1fr; }
+      .tengah { width: 100%; }
+    }
+
+    @media (max-width: 480px) {
+      .card { flex-direction: column; }
+      .foto { flex-basis: auto; width: 100%; height: 220px; }
+    }
+  </style>
+</head>
+
+<header class="header">
+  <h1 class="judul">Kelompok 6</h1>
+  <p class="intro">
+    Selamat datang di markas kami! Kami berlima: otaknya cuma satu, tapi
+    semangatnya lima. Kalau tugas selesai tepat waktu, itu mukjizat.
+    Kalau ada yang error, itu bukan bug, itu fitur kejutan.
+    Kenalan dulu yuk sebelum kami minta tolong lagi!
+  </p>
+</header>
+
+<body>
+
+  <h1>Anggota Tim</h1>
+
+  <main class="grid">
+
+    <!-- ===== ANGGOTA 1 ===== -->
+    <article class="card">
+      <div class="foto">
+        <!-- GANTI GAMBAR: ubah src dengan nama file fotomu -->
+        <img src="Gamarr/Davis.jpeg" alt="Gamarr/Davis.jpeg">
+      </div>
+      <div class="info">
+        <h2 class="nama">Davis Kresna Hadi</h2>
+        <table>
+          <tr><td>NIM</td><td>:</td><td>0110226161</td></tr>
+          <tr><td>Kelas</td><td>:</td><td>TI-1</td></tr>
+          <tr><td>Fun Fact</td><td>:</td><td>Adalah Pokoknya</td></tr>
+          <tr><td>Cita-Cita</td><td>:</td><td>Full Stack</td></tr>
+          <tr><td>Asal</td><td>:</td><td>Depok</td></tr>
+        </table>
+      </div>
+    </article>
+
+    <!-- ===== ANGGOTA 2 ===== -->
+    <article class="card">
+      <div class="foto">
+        <!-- GANTI GAMBAR: ubah src dengan nama file fotomu -->
+        <img src="Gamarr/Devina.jpeg" alt="Gamarr/Devina.jpeg">
+      </div>
+      <div class="info">
+        <h2 class="nama">Devina Nursiti Hodijah </h2>
+        <table>
+          <tr><td>NIM</td><td>:</td><td>0110226128</td></tr>
+          <tr><td>Kelas</td><td>:</td><td>TI-1</td></tr>
+          <tr><td>Fun Fact</td><td>:</td><td>Suka Makan</td></tr>
+          <tr><td>Cita-Cita</td><td>:</td><td>Jadi Holang Kaya</td></tr>
+          <tr><td>Asal</td><td>:</td><td>Depok</td></tr>
+        </table>
+      </div>
+    </article>
+
+    <!-- ===== ANGGOTA 3 ===== -->
+    <article class="card">
+      <div class="foto">
+        <!-- GANTI GAMBAR: ubah src dengan nama file fotomu -->
+        <img src="Gamarr/Dhilan.jpeg" alt=""Gamarr/Dhilan.jpeg"">
+      </div>
+      <div class="info">
+        <h2 class="nama">Dhilan Radya Irawan</h2>
+        <table>
+          <tr><td>NIM</td><td>:</td><td>0110226026</td></tr>
+          <tr><td>Kelas</td><td>:</td><td>TI-1</td></tr>
+          <tr><td>Fun Fact</td><td>:</td><td>Kalau Dateng, Telat</td></tr>
+          <tr><td>Cita-Cita</td><td>:</td><td>CEO</td></tr>
+          <tr><td>Asal</td><td>:</td><td>Bogor</td></tr>
+        </table>
+      </div>
+    </article>
+
+    <!-- ===== ANGGOTA 4 ===== -->
+    <article class="card">
+      <div class="foto">
+        <!-- GANTI GAMBAR: ubah src dengan nama file fotomu -->
+        <img src="Gamarr/Darma.jpeg" alt="Gamarr/Darma.jpeg">
+      </div>
+      <div class="info">
+        <h2 class="nama">Darma Satria Ramadhan</h2>
+        <table>
+          <tr><td>NIM</td><td>:</td><td>0110226178</td></tr>
+          <tr><td>Kelas</td><td>:</td><td>TI-1</td></tr>
+          <tr><td>Fun Fact</td><td>:</td><td>Sering Podcast sama Diri Sendiri</td></tr>
+          <tr><td>Cita-Cita</td><td>:</td><td>Presiden</td></tr>
+          <tr><td>Asal</td><td>:</td><td>Sukabumi</td></tr>
+        </table>
+      </div>
+    </article>
+
+    <!-- ===== ANGGOTA 5 (tengah, baris bawah) ===== -->
+    <article class="card tengah">
+      <div class="foto">
+        <!-- GANTI GAMBAR: ubah src dengan nama file fotomu -->
+        <img src="Gamarr/Dira.jpeg" alt="Gamarr/Dira.jpeg">
+      </div>
+      <div class="info">
+        <h2 class="nama">Dhias Rahma Aindira</h2>
+        <table>
+          <tr><td>NIM</td><td>:</td><td>0110226162</td></tr>
+          <tr><td>Kelas</td><td>:</td><td>TI-1</td></tr>
+          <tr><td>Fun Fact</td><td>:</td><td>Punya ASMA tapi suka Hiking</td></tr>
+          <tr><td>Cita-Cita</td><td>:</td><td>Psikiater x Desainer</td></tr>
+          <tr><td>Asal</td><td>:</td><td>Yogyakarta</td></tr>
+        </table>
+      </div>
+    </article>
+
+  </main>
+
+</body>
+</html>
